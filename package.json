@@ -1,0 +1,16 @@
+{
+    "name": "help-frontend",
+    "dependencies": {
+        "bower": "latest",
+        "grunt-asset-injector": "latest",
+        "grunt-cli": "latest",
+        "grunt-contrib-copy": "latest",
+        "grunt-contrib-cssmin": "latest",
+        "grunt-contrib-htmlmin": "latest",
+        "grunt-contrib-jshint": "latest",
+        "grunt-contrib-uglify": "latest"
+    },
+    "scripts": {
+        "postinstall": "./node_modules/bower/bin/bower install"
+    }
+}

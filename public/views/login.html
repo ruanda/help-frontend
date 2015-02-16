@@ -1,0 +1,8 @@
+<div class="container" ng-controller="LoginController">
+    <form class="form-signin" role="form">
+        <h2 class="form-signin-heading">Zaloguj się</h2>
+        <input type="text" name="auth[login]" ng-model="auth.login" class="form-control" placeholder="Login" required autofocus>
+        <input type="password" name="auth[password]" ng-model="auth.password" class="form-control" placeholder="Hasło" required>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" ng-click="login(auth)">Zaloguj</button>
+    </form>
+</div>
