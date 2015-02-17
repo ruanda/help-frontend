@@ -1,6 +1,9 @@
 angular.module('helpApp', [
     'ngRoute',
-    'helpApp.controllers'
+    'ui.bootstrap',
+    'helpApp.controllers',
+    'helpApp.services'
 ]);
 
 angular.module('helpApp.controllers', []);
+angular.module('helpApp.services', ['ngResource']);

@@ -8,6 +8,8 @@ module.exports = function(grunt) {
                     { expand: true, cwd: 'public/', src: '**', dest: 'build/' },
                     { src: 'lib/angular/angular.min.js*', dest: 'build/' },
                     { src: 'lib/angular-route/angular-route.min.js*', dest: 'build/' },
+                    { src: 'lib/angular-resource/angular-resource.min.js*', dest: 'build/' },
+                    { src: 'lib/angular-bootstrap/ui-bootstrap-tpls.min.js*', dest: 'build/' },
                     { src: 'lib/bootstrap/dist/**', dest: 'build/' },
                     { src: 'lib/jquery/dist/**', dest: 'build/' }
                 ]
@@ -48,7 +50,8 @@ module.exports = function(grunt) {
                         'build/lib/help-app/**/*.css',
                         'build/lib/help-app/js/app.js',
                         'build/lib/help-app/js/app-router.js',
-                        'build/lib/help-app/js/controller/*.js'
+                        'build/lib/help-app/js/controller/*.js',
+                        'build/lib/help-app/js/services/*.js'
                     ]
                 }
             },
