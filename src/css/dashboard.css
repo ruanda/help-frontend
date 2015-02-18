@@ -1,3 +1,6 @@
 BODY {
   padding-top: 50px;
 }
+
+/* bootstrap hack */
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
