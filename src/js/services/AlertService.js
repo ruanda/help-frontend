@@ -1,17 +1,20 @@
-angular.module('helpApp.services').factory('AlertService', [ '$rootScope', function($rootScope) {
+angular.module('helpApp.services').factory('AlertService', [ '$rootScope', '$timeout',
+function($rootScope, $timeout) {
     var AlertService;
     
     $rootScope.alerts = [];
 
     return AlertService = {
         add: function(type, msg) {
-            return $rootScope.alerts.push({
+            var alert = {
                 type: type,
                 message: msg,
                 close: function() {
                     return AlertService.closeAlert(this);
                 }
-            });
+            };
+            $timeout(function() { alert.close(); }, 3000);
+            return $rootScope.alerts.push(alert);
         },
         closeAlert: function(alert) {
             return this.closeAlertIdx($rootScope.alerts.indexOf(alert));

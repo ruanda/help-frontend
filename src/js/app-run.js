@@ -1,7 +1,5 @@
 angular.module('helpApp').run(['$rootScope', '$location', 'AuthService', 'UserService',
 function($rootScope, $location, AuthService, UserService) {
-    var clearRoutes = [ '/login' ];
-
     AuthService.get(
         {},
         // success
@@ -13,9 +11,4 @@ function($rootScope, $location, AuthService, UserService) {
             UserService.clearUser();
             $location.path("/login");
         });
-
-
-    $rootScope.$on('$routeChangeStart', function (event, next, current) {
-        console.log($location.url());
-    });
 }]);

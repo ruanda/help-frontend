@@ -12,7 +12,6 @@ function($scope, $location, AuthService, UserService) {
             },
             // error
             function(httpResponse) {
-                console.log("lol");
             });
     };
 }]);

@@ -9,6 +9,10 @@ angular.module('helpApp').config(['$routeProvider', '$locationProvider',
                 templateUrl: 'views/tickets.html',
                 controller: 'TicketsController'
             }).
+            when('/tickets/:ticketId', {
+                templateUrl: 'views/ticket.html',
+                controller: 'TicketController'
+            }).
             when('/create', {
                 templateUrl: 'views/newticket.html',
                 controller: 'NewTicketController'
