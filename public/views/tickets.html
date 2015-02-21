@@ -4,14 +4,14 @@
     <table class="table table-hover table-striped">
         <thead>
             <tr>
-                <th class="col-sm-1">ID</th>
-                <th class="col-sm-2">Data</th>
-                <th class="col-sm-7">Tytuł zgłoszenia</th>
-                <th class="col-sm-2">Status</th>
+                <th class="col-sm-1" ng-click="order('id')">ID</th>
+                <th class="col-sm-2" ng-click="order('createdAt')">Data</th>
+                <th class="col-sm-7" ng-click="order('summary')">Tytuł zgłoszenia</th>
+                <th class="col-sm-2" ng-click="order('status')">Status</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="ticket in tickets" ng-click="show(ticket.id)">
+            <tr ng-repeat="ticket in tickets | orderBy:predicate:reverse" ng-click="show(ticket.id)">
                 <td>{{ticket.id}}</td>
                 <td>{{ticket.createdAt}}</td>
                 <td>{{ticket.summary}}</td>
