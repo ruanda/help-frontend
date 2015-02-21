@@ -50,6 +50,7 @@ module.exports = function(grunt) {
                         'build/lib/help-app/**/*.css',
                         'build/lib/help-app/js/app.js',
                         'build/lib/help-app/js/app-router.js',
+                        'build/lib/help-app/js/app-directives.js',
                         'build/lib/help-app/js/app-run.js',
                         'build/lib/help-app/js/controller/*.js',
                         'build/lib/help-app/js/services/*.js'
