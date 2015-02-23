@@ -1,22 +1,22 @@
-//angular.module('helpApp.services').factory('WikiParser', [
-//function() {
+angular.module('helpApp.services').factory('WikiParser', [
+function() {
 //    var Parser;
 //    var ParserRule;
 //    var WikiParser;
 //    
 //    var parser;
 //
-//    var entityMap = {
-//        "&": "&amp;",
-//        "<": "&lt;",
-//        ">": "&gt;"
-//    };
-//
-//    function escapeHtml(string) {
-//        return String(string).replace(/[&<>]/g, function (s) {
-//            return entityMap[s];
-//        });
-//    };
+    var entityMap = {
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;"
+    };
+
+    function escapeHtml(string) {
+        return String(string).replace(/[&<>]/g, function (s) {
+            return entityMap[s];
+        });
+    };
 //
 //    ParserRule = function(params) {
 //        if (!arguments.length) { return; }
@@ -292,10 +292,10 @@
 //        }
 //    };
 //
-//    return {
-//        makeHtml: function(node, wiki) {
-//            var safeWiki = escapeHtml(wiki);
-//            parser.parse(node, safeWiki);
-//        }
-//    };
-//}]);
+    return {
+        makeHtml: function(wiki) {
+            var safeWiki = escapeHtml(wiki);
+            return safeWiki;
+        }
+    };
+}]);

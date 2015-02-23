@@ -24,7 +24,7 @@
                     <dd>{{ticket.keywords}}</dd>
                 </dl>
             </div>
-            <p>{{ticket.description}}</p>
+            <p lol-bind-wiki="ticket.description"></p>
         </div>
     </div>
     <div class="panel panel-default" ng-repeat="change in changes">
@@ -38,7 +38,7 @@
             </div>
             <div class="row" ng-if="change.comment">
                 <div class="col-sm-2">Komentarz</div>
-                <div class="col-sm-10">{{change.comment.newvalue}}</span></div>
+                <div class="col-sm-10" lol-bind-wiki="change.comment.newvalue"></span></div>
             </div>
         </div>
     </div>
